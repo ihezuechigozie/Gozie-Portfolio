@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+      </style>
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<title>My Portfolio</title>
+</head>
+<body>
+  <nav class="nav-bar">
+    <span class="logo-emma">
+      <img class="my-logo" src="./assets/my image.JPG" alt="my logo">
+      <br>
+      <u class="emma"><a href="#aboutEmma">Eng. Emma</a></u>
+    </span>
+    <span class="about-span">
+      <u onclick="toggleDropdown('aboutDropdown', 'arrowDown1', 'arrowUp1')" id="arrowDown1" class="underline-1">
+        <p>Profile  <i style="font-size: 15px;" class="fa-solid fa-chevron-down"></i></p>
+       
+      </u>
+      <u onclick="toggleDropdown('aboutDropdown', 'arrowDown1', 'arrowUp1')" id="arrowUp1" class="underline-1" style="display: none;">
+        <p>Profile <i style="font-size: 15px;" class="fa-solid fa-chevron-up"></i></p>
+        
+      </u>
+      <div class="dropdown-content-1" id="aboutDropdown" style="display: none;">
+        <a href="#aboutEmma" id="aboutEng">About Eng. Emma</a>
+        <a href="./#" id="aboutUs">About Us</a>
+      </div>
+     
+      <u class="underline-8"><a href="">Rewards</a></u>
+      <u onclick="toggleDropdown('contactsDropdown', 'arrowDown2', 'arrowUp2')" id="arrowDown2" class="underline-2">
+        <p>Contacts  <i style="font-size: 15px;" class="fa-solid fa-chevron-down"></i></p>
+       
+      </u>
+      <u onclick="toggleDropdown('contactsDropdown', 'arrowDown2', 'arrowUp2')" id="arrowUp2" class="underline-2" style="display: none;">
+        <p>Contacts <i style="font-size: 15px;" class="fa-solid fa-chevron-up"></i></p>
+      
+      </u>
+      <div class="dropdown-content-2" id="contactsDropdown" style="display: none;">
+        <a href="#myContact" id="myContacts">My Contacts</a>
+        <a href="#socialContact" id="socialContacts">Social Contacts</a>
+      </div>
+    
+    </span>
+    <span class="search-area">
+      <input class="search-bar" type="text" placeholder="Search here..." id="searchInput">
+      <button class="search" onclick="performSearch()">SEARCH</button>
+    </span> 
+    <p class="home">
+      <i class="fa-solid fa-house"></i>
+      Home
+    </p>
+  </nav>  
+  <br>
+  <div class="body-container">
+     <br>
+      <div class="sub-container">
+        <button class="buttons" id="prev">Previous</button>
+        <button class="buttons" id="next">Next</button>
+        <div class="container-a">
+          <div class="icon-cont">
+          
+            <p class="experiences">
+              <u onclick="toggleDropdown('experienceDropdown1','arrowDown3', 'arrowUp3')" id="toggleExperience1" class="underline-3">
+                <span>
+                  <i class="fa-duotone fa-solid fa-pen-to-square"></i> Experiences
+                  <i style="font-size: 15px;" class="fa-solid fa-chevron-down"></i>
+                </span>
+              </u>
+              <u onclick="toggleDropdown('experienceDropdown1','arrowDown3', 'arrowUp3')" id="toggleExperience1" class="underline-3" style="display: none;">
+                <p> 
+                  <i class="fa-duotone fa-solid fa-pen-to-square"></i>
+                  Experiences<i style="font-size: 15px;" class="fa-solid fa-chevron-up"></i>
+              </p>
+                
+              </u>
+              <div class="dropdown-content" id="experienceDropdown1" style="display: none;">
+                <a href="#experienceSoftware">Software Engineer</a>
+                <a href="#experiencePhysiologist">Physiologist</a>
+                <a href="#experienceProducer">Media Producer</a>
+                <a href="#experienceGraphics">Digital & Graphics</a>
+                <a href="#experienceProducer">Media Manager</a>
+              </div>
+            </p>
+          
+          
+            <p class="experiences">
+              <u onclick="toggleDropdown('degreeDropdown', 'arrowDown4', 'arrowUp4')" id="toggleDegree" class="underline-3">
+                <span>
+                  <i class="fa-solid fa-graduation-cap"></i> Degree
+                  <i style="font-size: 15px;" class="fa-solid fa-chevron-down"></i>
+                </span>
+              </u>
+              <u onclick="toggleDropdown('degreeDropdown4', 'arrowDown4', 'arrowUp4')" id="toggleDegree" class="underline-3" style="display: none;">
+                <p><i class="fa-solid fa-graduation-cap"></i> 
+                  Degree<i style="font-size: 15px;" class="fa-solid fa-chevron-up"></i>
+                </p>
+                
+              </u>
+              <div class="dropdown-content" id="degreeDropdown" style="display: none;">
+                <a href="#degreeCert">Software Engineer</a>
+                <a href="#degreeCert">Physiologist</a>
+                <a href="#degreeCert">Media Producer</a>
+                <a href="#degreeCert">Digital & Graphics</a>
+                <a href="#degreeCert">Media Manager</a>
+              </div>
+            </p>
+          
+            <p class="experiences">
+              <u onclick="toggleDropdown('projectsDropdown','arrowDown5', 'arrowUp5')" id="toggleProjects" class="underline-3">
+                <span>
+                  <i class="fa-solid fa-briefcase"></i> Projects
+                  <i style="font-size: 15px;" class="fa-solid fa-chevron-down"></i>
+                </span>
+              </u>
+              <u onclick="toggleDropdown('projectsDropdown','arrowDown5', 'arrowUp5')" id="toggleProjects" class="underline-3" style="display: none;">
+                <p><i class="fa-solid fa-briefcase"></i> 
+                  Projects<i style="font-size: 15px;" class="fa-solid fa-chevron-up"></i>
+                </p>
+                
+              </u>
+              <div class="dropdown-content" id="projectsDropdown" style="display: none;">
+                <a href="#projectsSoftwareEngineer">Software Engineer</a>
+                <a href="#projectsPhysiology">Physiologist</a>
+                <a href="#projectsMediaProducer">Media Producer</a>
+                <a href="#projectsDigitalGraphics">Digital & Graphics</a>
+                <a href="#projectsMediaManager">Media Manager</a>
+              </div>
+            </p>
+          
+            <p class="experiences">
+              <u onclick="toggleDropdown('competenciesDropdown','arrowDown6', 'arrowUp6')" id="toggleCompetencies" class="underline-3">
+                <span>
+                  <i class="fa-solid fa-pen-nib"></i> Competencies
+                  <i style="font-size: 15px;" class="fa-solid fa-chevron-down"></i>
+                </span>
+              </u>
+              <u onclick="toggleDropdown('competenciesDropdown','arrowDown6', 'arrowUp6')" id="toggleCompetencies" class="underline-3" style="display: none;">
+                <p><i class="fa-solid fa-pen-nib"></i> 
+                  Competencies<i style="font-size: 15px;" class="fa-solid fa-chevron-up"></i>
+                </p>
+                
+              </u>
+              <div class="dropdown-content" id="competenciesDropdown" style="display: none;">
+                <a href="#competenciesSoftwareEngineer">Software Engineer</a>
+                <a href="#competenciesSoftwareEngineer">Physiologist</a>
+                <a href="#competenciesSoftwareEngineer">Media Producer</a>
+                <a href="#competenciesSoftwareEngineer">Digital & Graphics</a>
+                <a href="#competenciesSoftwareEngineer">Media Manager</a>
+              </div>
+            </p>
+     
+            <p class="experiences">
+              <a href="#socialIntrest"><i class="fa-regular fa-heart"></i> Personal Interest</a>
+            </p>
+           
+            <p class="experiences">
+              <a href="#certificationId"><i class="fa-solid fa-certificate"></i> Certifications</a>
+            </p>
+          </div>
+          
+          
+
+        </div>
+        <div class="container-b">
+          <div class="slideShow-container">
+            <div class="image-slide-1">
+              <br>
+              <div class="text-image-clip-1">
+              <div class="image-on-text">
+                <h1 class="media-p">SOFTWARE ENGINEER:</h1>
+                Full Stack Web Developer
+                <br>
+                Web Specialist
+              </div>
+              <div class="image-text" style="display: none;">
+                <br>
+                <h1>SOFTWARE ENGINEER:</h1>
+                Full Stack Web Developer
+                <br>
+                Web Specialist
+              </div>
+              </div>
+            </div>
+        
+            <div class="image-slide-2" >
+              <br>
+              <div class="text-image-clip-2">
+              <div class="image-on-text">
+                <br>
+                <h1 class="media-p">PHYSIOLOGIST:</h1>
+                EEG Expert (Encephalography) <br>
+                ECG Expert (Electrocardiography)
+              </div>
+              <div class="image-text" style="display: none;">
+                <br>
+                <h1>PHYSIOLOGIST:</h1>
+                EEG Expert (Encephalography) <br>
+                ECG Expert (Electrocardiography)
+              </div>
+              </div>
+            </div>
+            <div class="image-slide-3">
+              <br>
+              <div class="text-image-clip-3">
+                <div class="image-on-text">
+                  <h1 class="media-p">DIGITAL EXPERT & GRAPHICS:</h1>
+                  Photo/Costume Framer <br>
+                  Graphic Designer <br>
+                  Media Management
+                </div>
+                <div class="image-text" style="display: none;">
+                  <h1>DIGITAL EXPERT & GRAPHICS:</h1>
+                  Photo/Costume Framer <br>
+                  Graphic Designer <br>
+                  Media Management
+                </div>
+              </div>
+            </div>
+            <div class="image-slide-5">
+              <br>
+              <div class="text-image-clip-5">
+                <div class="image-on-text">
+                  <br>
+                  <h1 class="media-p">MEDIA PRODUCER:</h1>
+                  photography Productions <br>
+                  videography Productions
+                </div>
+                <div class="image-text" style="display: none;">
+                  <br>
+                  <h1>MEDIA PRODUCER:</h1>
+                  photography Productions <br>
+                  videography Productions
+                </div>
+              </div>
+            </div>
+            <div class="image-slide-4">
+              <br>
+              <div class="text-image-clip-4">
+                <div class="image-on-text">
+                  <h1 class="media-p">SOFT SKILLS:</h1>
+                  Microsoft Office User <br>
+                  Photo Editor <br>
+                  Team Organizer & Excellent Communication Skill
+                </div>
+                <div class="image-text" style="display: none;">
+                  <h1>SOFT SKILLS:</h1>
+                  Microsoft Office User <br>
+                  Photo Editor <br>
+                  Team Organizer & Excellent Communication Skill
+                </div>
+              </div>
+            </div> 
+          </div> 
+        </div>
+        <div class="container-c">
+          <div class="mini-a">
+             <br>
+            <div class="contact-us">
+              
+              <p class="phone-number">
+                <a href="tel:+2348162981430" title="Call this number">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </a>
+                <br>
+                <a href="tel:+2348162981430"><u style="text-decoration: none;">+2348162981430</u></a><br>
+                <a href="tel:+2349151670686"><u style="text-decoration: none;">+2349151670686</u></a>
+              </p>              
+
+              <p class="message">
+                <a href="sms:+2348162981430" title="Send me a message">
+                  <i class="fa-regular fa-message"></i>
+                </a>
+                <!-- +2348162981430 -->
+              </p>
+              
+              <p class="email">
+                <a href="mailto:ihezuechigozie@gmail.com" title="Send me an email">
+                  <i class="fa-regular fa-envelope"></i>
+                   <!-- <u style="text-decoration: none;"> ihezuechigozie@gmail.com</u> -->
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="mini-b">
+             <br>
+            <div class="mini-child">
+              <p class="social-display">
+                <a href="https://wa.me/08162981430" target="_blank" title="Whatsapp" rel="norefeerer"> 
+                  <i class="fa-brands fa-whatsapp"></i> 
+                </a>
+                <!-- <u class="social-acc-1">+2348162981430</u> -->
+                <a href="https://instagram.com/chigozie.ihezue" target="_blank" title="Instagram" rel="norefeerer">
+                  <i class="fa-brands fa-instagram"></i> 
+                </a>
+                <!-- <u class="social-acc-2">@Ihezue Chigozie</u> -->
+                
+              </p>
+              <br>
+              <p class="social-display">
+                <a href="https://facebook.com/ihezuechigozie" target="_blank" title="Facebook" rel="norefeerer">
+                  <i class="fa-brands fa-facebook"></i> 
+                </a>
+                <!-- <u class="social-acc-3">Ihezue Chigozie</u> -->
+                
+                <a href="https://linkedin.com/in/ihezue chigozie" target="_blank" title="Linkedin" rel="norefeerer">
+                  <i class="fa-brands fa-linkedin"></i> 
+                </a>
+                <!-- <u class="social-acc-4">Ihezue Chigozie</u> -->
+              </p>
+                
+              <br>
+              <p class="social-display">
+                <a href="https://pinterest.com/ihezue chigozie" target="_blank" title="Pinterest" rel="norefeerer">
+                 <i class="fa-brands fa-pinterest"></i> 
+                </a>
+                <!-- <u class="social-acc-5">Ihezue Chigozie</u> -->
+
+                <a href="https://twitter.com/ihezue chigozie" target="_blank" title="Twitter" rel="norefeerer">
+                  <i class="fa-brands fa-twitter"></i> 
+                </a>
+                <!-- <u class="social-acc-6">Ihezue Chigozie</u> -->
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+     <div class="about-me-background">
+        <br>
+        <img class="my-pic" src="./assets/my image.JPG" alt="my logo">
+        <p style="text-align: center; color: #ffffff;
+          font-weight: 700; font-size: 28px;">
+          <b>IHEZUE CHIGOZIE EMMANUEL</b> <br>
+          <b>Software Engineer</b>
+        </p>
+      
+      <div id="aboutEmma" class="about-me-text">
+        <div class="paragraph">
+        <h2><b> Ihezue Chigozie Emma</b></h2>
+        <br>
+          <p>Born on December 28, 1994, and hailing from Anambra State, Nigeria,
+            I am a seasoned Physiologist, Software Engineer,Photo and Video Producer,
+            Graphics Designer, Media Manager and Web Development Instructor with a 
+            strong academic foundation and a passion
+            for empowering individuals to excel in technology-driven environments.
+            I began my educational journey at All Saints Primary School, Anambra
+            State, where I earned my Primary School Leaving Certificate in 2008. 
+            I later graduated from All Saints Secondary School in 2014 with a Senior 
+            Secondary Certificate.
+          </p> 
+          <p>My early
+            interest in technology led me to obtain a Diploma in Digital Literacy 
+            from Our Lady of Lourdes, Anambra State, in 2015.
+            I furthered my studies at Chukwuemeka Odumegwu Ojukwu University, 
+            graduating in 2022 with a BSc in Human Physiology. To deepen my expertise 
+            in the tech industry, I completed a Diploma in Software Engineering at 
+            SQI College of ICT, Ogun State, in 2024.
+            With my diverse educational background and practical experience, I am committed 
+            to fostering digital literacy and mentoring aspiring professionals to navigate the 
+            evolving world of technology with confidence and competence.
+          </p>
+        </div>
+        <div id="certificationId" class="paragraph-1">
+          <h3><b><center>EDUCATIONAL BACKGROUND</center></b></h3>
+          <br>
+          <div class="flex-paragraph">
+            <div id="degreeCert" class="paragraph-section">
+              <p>
+                <b>1.	Primary Education</b> <br>
+                <b>o	School:</b> All Saints Primary School, Anambra State <br>
+                <b>o	Certificate:</b> Primary School Leaving Certificate <br>
+                <b>o	Year Completed:</b> 2008
+              </p>
+              <br>
+              <p>
+                <b>2.	Secondary Education</b> <br>
+              <b> o	School:</b> All Saints Secondary School, Anambra State <br>
+                <b>o	Certificate:</b>Senior Secondary Certificate <br>
+              <b> o	Year Completed:</b> 2014
+              </p>
+              <br>
+              <p id="degreeGraphics">
+              <b>3.	Diploma in Digital Literacy </b><br>
+                <b>o	Institution:</b> Our Lady of Lourdes, Anambra State <br>
+                <b>o	Certificate:</b>Diploma in Digital Literacy <br>
+                <b>o	Year Completed:</b> 2015
+              </p>
+             
+            </div>
+            <div id="degreePhysiology" class="paragraph-section">
+              <p>
+                <b>4.	Bachelor’s Degree</b> <br>
+                <b>o	Institution:</b> Chukwuemeka Odumegwu Ojukwu University, Anambra State <br>
+                <b>o	Degree:</b> Bachelor of Science (BSc) in Human Physiology <br>
+                <b>o	Year Completed:</b> 2022
+              </p>
+              <br>
+              <p>
+              <b> 5.	Certification in EEG and ECG Expertise </b><br>
+                <b>o	Institution:</b> Chukwuemeka Odumegwu Ojukwu Teaching Hospital, Anambra State <br>
+                <b>o	Certificate:</b>EEG and ECG Expert <br>
+                <b>o	Year Completed:</b> 2022
+              </p>
+              <br>
+              <p id="degreeSoftware">
+                <b>6.	Diploma in Software Engineering </b><br>
+                <b>o	Institution:</b> SQI College of ICT, Ogun State <br>
+                <b>o	Certificate:</b>Diploma in Software Engineering <br>
+                <b>o	Year Completed:</b> 2024
+              </p>
+              <div class="button-0001">Check Certificate </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+    <hr>
+    <div class="contact-container-iamge-bg">
+      <div class="contact-container">
+        
+        <div id="myContact" class="social-contact-div">
+          <h2>Contact Eng. Emma</h2>
+          <div class="mini-social-contact">
+            <p class="phone-number">
+              <a href="tel:+2348162981430" title="Call this number">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </a>
+              <br>
+              <a href="tel:+2348162981430"><u style="text-decoration: none;">+2348162981430</u></a><br>
+              <a href="tel:+2349151670686"><u style="text-decoration: none;">+2349151670686</u></a>
+            </p>      
+            <p class="message">
+              <a href="sms:+2348162981430" title="Send me a message">
+              <i class="fa-regular fa-message"></i>
+              </a>
+              <br>
+              <a href="sms:+2348162981430"><u>+2348162981430</u></a>
+            </p>
+            <p class="email">
+              <a href="mailto:ihezuechigozie@gmail.com" title="Send me an email">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <br>
+              <a href="mailto:ihezuechigozie@gmail.com"><u>ihezuechigozie@gmail.com</u></a>
+            </p>
+          </div>
+        </div>
+        <div class="my-pic-container">
+          <img class="my-pic-2" src="./assets/my image.JPG" alt="my picture">
+          <div class="details">
+            <p class="name">IHEZUE CHIGOZIE EMMANUEL</p>
+            <p class="title software">Software Engineer</p>
+            <p class="title physiologist-b">Physiologist</p>
+            <p class="title physiologist-b">Media Producer</p>
+            <p class="title physiologist-b">Graphic Designer</p>
+            <p class="title physiologist-b">Media Manager</p>
+            <p class="title physiology">Digital Designer</p>
+          </div>
+        </div>
+        
+          
+        <div id="socialContact" class="social-contact-div">
+          <h2>Social Contacts</h2>
+          <div class="mini-social-contact">
+            <p>
+              <a href="https://wa.me/08162981430" target="_blank" title="Whatsapp" rel="norefeerer"> 
+                <i class="fa-brands fa-whatsapp"></i> 
+                <u class="social-acc-1">+2348162981430</u>
+              </a>
+            </p>
+            <p>
+              <a href="https://instagram.com/chigozie.ihezue" target="_blank" title="Instagram" rel="norefeerer">
+                <i class="fa-brands fa-instagram"></i> 
+                <u class="social-acc-2">@Ihezue Chigozie</u>
+              </a>
+            </p>
+            <p>
+              <a href="https://facebook.com/ihezuechigozie" target="_blank" title="Facebook" rel="norefeerer">
+                <i class="fa-brands fa-facebook"></i> 
+                <u class="social-acc-3">Ihezue Chigozie</u>
+              </a>
+            </p>
+            <p>
+              <a href="https://linkedin.com/in/ihezue chigozie" target="_blank" title="Linkedin" rel="norefeerer">
+                <i class="fa-brands fa-linkedin"></i> 
+                <u class="social-acc-4">Ihezue Chigozie</u>
+              </a>
+            </p>
+            <p>
+              <a href="https://pinterest.com/ihezue chigozie" target="_blank" title="Pinterest" rel="norefeerer">
+                <i class="fa-brands fa-pinterest"></i> 
+                <u class="social-acc-5">Ihezue Chigozie</u>
+              </a>
+            </p>
+            <p>
+              <a href="https://twitter.com/ihezue chigozie" target="_blank" title="Twitter" rel="norefeerer">
+                <i class="fa-brands fa-twitter"></i> 
+                <u class="social-acc-6">Ihezue Chigozie</u>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    
+    <div id="experienceId" class="experience-container">
+    
+      <div id="experienceSoftware" class="sub-experience-container">
+         
+          <div class="experience-write-up">
+              <h2> EXPERIENCE AS SOFTWARE ENGINEER</h2>
+              <p>
+                I have over two years of professional experience as a full-stack software engineer, during which 
+                I have cultivated a strong foundation in designing, developing, and deploying robust web and mobile 
+                applications. My expertise spans across multiple technologies and frameworks, enabling me to deliver 
+                scalable solutions that align with business objectives and user needs.
+              </p>
+              <b>Front-End Development</b>
+              <p>
+                  Extensive experience in front-end development using HTML5, CSS3, JavaScript, React.js, and Angular. 
+                  I create responsive, user-friendly interfaces prioritizing accessibility and seamless user experiences.
+              </p>
+              <b>Back-End Development</b>
+              <p>
+                  Expertise in building APIs and server-side applications using Node.js and  Express.js. Skilled 
+                  in database design and management with MongoDB and Firebase, enabling efficient data-driven applications.
+              </p>
+              <p>
+
+              </p>
+          </div>
+  
+          
+          <div class="experience-write-up">
+              <h2>Key Achievements</h2>
+              <p>
+                  <b>• Banking Application:</b> Developed a comprehensive banking app with account management, secure 
+                  authentication, and transaction tracking. <br>
+                  <b>• E-Commerce Platform:</b> Built an e-commerce platform with payment gateways and customer reviews. <br>
+                  <b>• Educational Platform:</b> Created an LMS supporting real-time interactions and analytics. <br>
+              </p>
+          </div>
+          <div class="experience-write-up">
+            <h2>Key Experience</h2>
+            <div class="chart-container">
+              <div class="bar bar1"><u style="text-decoration: none;">HTML </u>80%</div>
+              <div class="bar bar2"><u style="text-decoration: none;">CSS </u>80%</div>
+              <div class="bar bar3"><u style="text-decoration: none;">JavaScript </u>75%</div>
+              <div class="bar bar4"><u style="text-decoration: none;">Bootstrap-5 </u>75%</div>
+              <div class="bar bar5"><u style="text-decoration: none;">GIT </u>60%</div>
+              <div class="bar bar6"><u style="text-decoration: none;">ReactJS </u>80%</div>
+              <div class="bar bar7"><u style="text-decoration: none;">NodeJS </u>75%</div>
+              <div class="bar bar8"><u style="text-decoration: none;">Database </u>75%</div>
+            </div>
+          </div>
+      </div>
+
+      <div class="right-panel">
+          <h2>
+            Explore More
+             <br>
+            <div class="button-0002">Projects</div>
+          </h2>
+          <p>Discover how I can help your business thrive with my expertise in software engineering and development.</p>
+      </div>
+      
+    </div>
+    <div class="sub-experience-container">
+
+      <div id="experiencePhysiologist" class="experience-write-ups">
+        <h2> EXPERIENCE AS A PHYSIOLOGIST</h2>
+        <div class="flex-experience-container">
+          <div class="experience-write-up-1">
+            <p>
+              With over two years of hands-on experience as an EEG (Electroencephalography) 
+              and ECG (Electrocardiography) expert, I have developed specialized skills in 
+              the monitoring, analysis, and interpretation of electrical activity in the brain 
+              and heart. My role has involved working with advanced medical equipment to provide 
+              critical data for diagnosing and monitoring neurological and cardiovascular conditions.
+            </p>
+              As an EEG expert, I have gained proficiency in performing non-invasive brain function tests, 
+              interpreting complex brainwave patterns, and assisting healthcare teams in diagnosing 
+              disorders such as epilepsy, sleep disorders, and neurological abnormalities. A solid 
+              understanding of various EEG-related diagnostic procedures and protocols has complemented 
+              my experience in setting up and conducting EEG tests.
+            <p>
+              In my role as an ECG expert, I have conducted and analyzed heart function tests, 
+              identifying abnormal rhythms and other cardiovascular issues. My skills in operating 
+              ECG equipment, interpreting heart rate patterns, and providing essential data for patient 
+              care have contributed significantly to effective treatment planning and monitoring.
+              Working closely with multidisciplinary healthcare teams, I have consistently provided 
+              high-quality data and detailed reports, contributing to patient-centered care and informed 
+              decision-making. My ability to remain calm under pressure, along with my attention to detail, 
+              ensures that I consistently provide accurate and reliable test results. 
+            </p>
+             
+            <p>
+              My commitment to professional growth and staying updated on the latest advancements in medical 
+              technology has enhanced my expertise, ensuring I provide the highest level of care and support 
+              in both EEG and ECG diagnostics.
+            </p>
+          </div>
+          <div class="experience-write-up-1">
+            <h2>Key Experience</h2>
+            <div class="chart-container">
+              <div class="bar bar1"><u style="text-decoration: none;">Human Physiology </u>80%</div>
+              <div class="bar bar2"><u style="text-decoration: none;">Research & Analysis </u>80%</div>
+              <div class="bar bar3"><u style="text-decoration: none;">Clinical Assessments </u>75%</div>
+              <div class="bar bar4"><u style="text-decoration: none;">Data Interpretation </u>75%</div>
+              <div class="bar bar5"><u style="text-decoration: none;">Neonatal Patterns</u>60%</div>
+              <div class="bar bar6"><u style="text-decoration: none;">Artfacts </u>80%</div>
+              <div class="bar bar7"><u style="text-decoration: none;">Troubleshooting </u>75%</div>
+              <div class="bar bar8"><u style="text-decoration: none;">Electrode Placement</u>75%</div>
+            </div> <br><br><br>
+            <div class="button-0001">Explore Samples</div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="experienceGraphics" class="experience-write-ups">
+        <h2>EXPERIENCE AS DIGITAL EXPERT <br> & GRAPHICS DESIGNER</h2>
+        <div class="flex-experience-container">
+          <div class="experience-write-up-1">
+            <p>
+              With extensive experience in digital arts and graphic design, I have built a strong 
+              foundation as a versatile Digital Expert, excelling in various roles such as 
+              Photo/Costume Framer, Graphic Designer, and Media Manager. My work is characterized 
+              by creativity, attention to detail, and the ability to bring concepts to life through 
+              visually captivating designs and seamless media management.
+            </p>
+              <b>As a Photo/Costume Framer;</b> I have developed a keen eye for detail in framing and presenting 
+              photos and costumes in ways that enhance their visual appeal. Whether for exhibitions, 
+              fashion shoots, or digital portfolios, I ensure that each piece is displayed in the most 
+              compelling and aesthetically pleasing manner.
+            <p>
+              <b>As a Graphic Designer;</b> I have created engaging visuals for both digital and print media, 
+              specializing in brand identity, marketing materials, advertisements, and web design. 
+              My skills in using advanced design software, such as Adobe Photoshop, Illustrator, 
+              and InDesign, enable me to deliver polished designs that align with client objectives 
+              and industry trends.
+            </p>
+             
+            <p>
+              <b>As a Media Manager;</b> I have overseen the planning, execution, and analysis of media 
+              content across various platforms. My expertise includes content creation, social 
+              media management, and media campaign strategies. I work closely with teams to 
+              ensure that media output is consistent, impactful, and reaches the intended audience effectively.
+              With a strong understanding of design principles, an eye for composition, and proficiency in 
+              media tools, I am dedicated to producing high-quality visual content that resonates with 
+              viewers and supports strategic goals. My passion for digital arts and innovation drives me 
+              to stay ahead of trends and continuously improve my craft.
+            </p>
+          </div>
+          <div class="experience-write-up-1">
+            <h2>Key Experience</h2>
+            <div class="chart-container">
+              <div class="bar bar1"><u style="text-decoration: none;">Adobe Creative Suite </u>80%</div>
+              <div class="bar bar2"><u style="text-decoration: none;">CoralDraw</u>80%</div>
+              <div class="bar bar3"><u style="text-decoration: none;">Photoshop </u>75%</div>
+              <div class="bar bar4"><u style="text-decoration: none;">Photo Framing & Editing </u>75%</div>
+              <div class="bar bar5"><u style="text-decoration: none;">Typography</u>60%</div>
+              <div class="bar bar6"><u style="text-decoration: none;">Product Customizing </u>80%</div>
+              <div class="bar bar7"><u style="text-decoration: none;">Phtot Enlargment </u>75%</div>
+              <div class="bar bar8"><u style="text-decoration: none;">Canva Design </u>75%</div>
+            </div>
+            <br><br><br>
+            <div class="button-0001">Explore Samples</div>
+        </div>
+        </div>
+      </div>
+
+      <div id="experienceProducer" class="experience-write-ups">
+        <h2>EXPERIENCE AS MEDIA PRODUCER</h2>
+        <div class="flex-experience-container">
+          <div class="experience-write-up-1">
+            <p>
+             With over 7 years of dedicated experience in the photography and videography industry, 
+             I have honed my skills in capturing and producing high-quality visual content for a 
+             wide range of projects. My expertise spans across various aspects of the production process, 
+             including conceptualization, shooting, editing, and final delivery, ensuring that every project 
+             is executed with precision and creativity.
+
+            </p>
+              Throughout my career, I have worked on diverse projects, ranging from corporate events, 
+              weddings, and fashion shoots to promotional videos, documentaries, and cinematic productions. 
+              This experience has not only refined my technical proficiency with state-of-the-art camera 
+              equipment but also enhanced my ability to work closely with clients, understanding their 
+              vision and translating it into compelling visual stories.
+            <p>
+              I specialize in creating immersive experiences through innovative cinematography techniques, 
+              leveraging both natural and artificial lighting, as well as utilizing advanced post-production 
+              software to deliver polished, professional results. Whether it's capturing a fleeting moment or 
+              producing a feature-length film, I bring passion and attention to detail to every project, 
+              ensuring that the final product exceeds expectations.
+            </p>
+             
+            <p>
+              My dedication to continuous learning and adapting to new technologies has allowed me to stay at 
+              the forefront of the industry, constantly evolving with the trends and techniques that define 
+              modern photography and videography. As a professional, I am committed to delivering visual 
+              content that not only tells a story but also evokes emotion, leaving a lasting impression on audiences.
+            </p>
+          </div>
+          <div class="experience-write-up-1">
+            <h2>Key Experience</h2>
+            <div class="chart-container">
+              <div class="bar bar1"><u style="text-decoration: none;">Content Creation </u>80%</div>
+              <div class="bar bar2"><u style="text-decoration: none;">Project Management </u>80%</div>
+              <div class="bar bar3"><u style="text-decoration: none;">Photo Production </u>75%</div>
+              <div class="bar bar4"><u style="text-decoration: none;">Video Production</u>75%</div>
+              <div class="bar bar5"><u style="text-decoration: none;">Editing</div>
+              <div class="bar bar6"><u style="text-decoration: none;">Post-Production</u>80%</div>
+              <div class="bar bar7"><u style="text-decoration: none;">Studio Management:</u>75%</div>
+              
+            </div>
+            <br><br><br>
+            <div class="button-0001">Explore Samples</div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div id="socialIntrest" class="interests-container">
+      <h2>MY PERSONAL AND SOCIAL INTERESTS</h2>
+      <p class="interests-summary">
+        I am passionate about activities that enhance personal growth and foster community 
+        connections. My interests span across creativity, learning, and engagement with technology and society.
+      </p>
+      <div class="interests-list">
+        <div class="interest-item">
+          <h3> <i class="fa-solid fa-chalkboard-user"></i> Technology</h3>
+          <p>Exploring new innovations, coding, and building software solutions that solve real-world problems.</p>
+        </div>
+        <div class="interest-item">
+          <h3> <i class="fa-solid fa-camera"></i> Photography</h3>
+          <p>Capturing life's moments through the lens and telling stories that resonate deeply with others.</p>
+        </div>
+        <div class="interest-item">
+          <h3> <i class="fa-solid fa-users"></i> Community Engagement</h3>
+          <p>Volunteering, Traveling, Mentoring,  and Participating in activities that uplift and empower communities.</p>
+        </div>
+        <div class="interest-item">
+          <h3> <i class="fa-solid fa-list-check"></i> Learning</h3>
+          <p>Continually expanding my knowledge in fields like technology, design, and personal development.</p>
+        </div>
+        <div class="interest-item">
+          
+          <h3> <i class="fa-solid fa-heart-pulse"></i> Fitness</h3>
+          <p>Staying active through regular exercise, promoting both physical and mental well-being.</p>
+          <p>Sports Activities e.g Football and Indoor Games</p>
+        </div>
+        <div class="interest-item">
+          <h3> <i class="fa-solid fa-book-open-reader"></i>  Reading</h3>
+          <p>Gaining more knowledge through reading, enriches my mind and broadens my perspective.</p>
+          <p>I continuously learn, stay inspired, and connect with ideas that enhance my personal and professional growth.</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+
+    <div style="margin-top: 40px;">
+      <p class="name-class">IHEZUE CHIGOZIE EMMANUEL</p>
+      <p class="competence">COMPETENCIES</p>
+    </div>
+    <div id="competenciesSoftwareEngineer" class="detail-flex-div">
+      <div class="details-class">
+        <p id="competenceSoftware" class="software-engineer">Software Engineer</p>
+        <div class="skills">
+          <p class="skill"><span class="field">HTML:</span> <span class="level">Excellent (80%)</span></p>
+          <p class="skill"><span class="field">CSS:</span> <span class="level">Excellent (80%)</span></p>
+          <p class="skill"><span class="field">JavaScript:</span> <span class="level">Very Good (75%)</span></p>
+          <p class="skill"><span class="field">ReactJS:</span> <span class="level">Excellent (80%)</span></p>
+          <p class="skill"><span class="field">NodeJS:</span> <span class="level">Very Good (75%)</span></p>
+          <p class="skill"><span class="field">ExpressJS:</span> <span class="level">Very Good (72%)</span></p>
+          <p class="skill"><span class="field">Database Management: </span> <span class="level"> Very Good (72%)</span></p>
+        </div>
+      
+        <p id="competencePhysiologist" class="physiology-skill">Physiologist</p>
+        <div class="skills">
+          <p class="skill"><span class="field">Human Physiology:</span> <span class="level">Excellent (80%)</span></p>
+          <p class="skill"><span class="field">Research & Analysis:</span> <span class="level">Very Good (75%)</span></p>
+          <p class="skill"><span class="field">Clinical Assessments:</span> <span class="level">Good (70%)</span></p>
+          <p class="skill"><span class="field">Data Interpretation:</span> <span class="level">Very Good (75%)</span></p>
+        </div>
+      </div>
+      <div class="details-class">
+        <p id="competenceProducer" class="physiology-skill">Media Producer</p>
+        <div class="skills">
+          <p class="skill">
+            <span class="field">Content Creation:</span> <span class="level">Excellent (80%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Project Management:</span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Video & Photo Production:</span> <span class="level">Good (70%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Editing & Post-Production:</span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Studio Management:</span> <span class="level">Very Good (75%)</span>
+          </p>
+        </div>
+        <p id="competenceGraphics" class="physiology-skill">Graphic Designer</p>
+        <div class="skills">
+          <p class="skill">
+            <span class="field">Adobe Creative Suite:</span> <span class="level">Excellent (80%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">UI/UX Design:</span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Canva Design:</span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Photo Editing:</span> <span class="level">Good (70%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Typography:</span> <span class="level">Very Good (75%)</span>
+          </p>
+        </div>
+      </div>
+      <div class="details-class">
+        <p id="competenceMedia" class="physiology-skill">Media Manager</p>
+        <div class="skills">
+          <p class="skill">
+            <span class="field">Content Strategy:</span> <span class="level">Excellent (80%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Social Media Management:</span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Analytics & Reporting:</span> <span class="level">Good (70%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Campaign Management:</span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Content Writing:</span> <span class="level">Very Good (75%)</span>
+          </p>
+         
+        </div>
+      
+        <p id="competenceDigitalDesign" class="physiology-skill">Digital Designer</p>
+        <div class="skills">
+          <p class="skill">
+            <span class="field">Responsive Design:</span> <span class="level">Excellent (80%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Product Branding: </span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Product Customizing: </span> <span class="level">Good (70%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Photo Enlargment: </span> <span class="level">Very Good (75%)</span>
+          </p>
+          <p class="skill">
+            <span class="field">Framing: </span> <span class="level">Very Good (75%)</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    
+
+  </div>
+  <nav class="nav-bar-2">
+    <div class="nav-nt"></div>
+    <p>My Portfolio @ 2023</p>
+    <div class="back-to-top">
+      <div id="scrollTopBtn" class="scroll-to-top">
+        <img  
+        src="./assets/arrow icon rbg.png" height="30px">
+        <br>
+        Scroll Up
+      </div>
+    </div>
+  </nav>
+  <script src="index.js"></script>
+</body>
+</html>
