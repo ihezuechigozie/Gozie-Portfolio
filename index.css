@@ -831,7 +831,6 @@ color: #4d4c4cd3;
   font-size: 15px;
   padding-top: 12px;
   font-weight: 600;
-  font-family: "Lexend", sans-serif;
   text-align: center;
   transition: 0.5s; 
 }
@@ -894,6 +893,49 @@ color: #4d4c4cd3;
   color: #555;
   line-height: 1.4;
 }
+.button-a2 {
+  border: none;
+  text-align: center;
+  transition: 0.5s; 
+  text-decoration: none;
+  padding: 10px 25px;
+  background-color: #4d4c4cd3;
+  border-radius: 9px;
+  font-size: 15px;
+  color: #ffff;
+  font-weight: 700;
+  display: block;
+  justify-items: center;
+  justify-self: center;
+  margin: 10px;
+ 
+}
+.button-a2 :hover{
+  background-color: #979292f3; 
+  color: #4d4c4cd3; 
+}
+.image-div{
+  width: 100%;
+ display: flex;
+}
+.work-sample-1,
+.work-sample-2,
+.work-sample-3{
+  height: 340px;
+  width: 33%;
+ border-radius: 12px;
+ border: 4px solid #6c63ff;
+}
+.button-for-sample{
+  width: 90%;
+  margin-left: 5%;
+  display: inline-flex;
+  justify-content: space-between;
+  justify-items: center;
+  justify-self: center;
+
+}
+
 
 
 .detail-flex-div{
