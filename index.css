@@ -2170,18 +2170,32 @@ border-radius: 5px;
   padding: 10px 20px;
  margin-top: 20px;
 }
+.work-sample-cont{
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
 .button-a2{
   width: auto;
   height: auto;
   text-align: center;
   font-size: 11px;
+  justify-content: center;
+  justify-self: center;
 }
 .image-div{
   flex-direction: column;
   justify-content: center;
   justify-self: center;
-  margin-left: 20px;
+ margin: 0px;
 }
+.work-sample-1,
+.work-sample-2,
+.work-sample-3{
+  width: 300px;
+}
+
 
 .bar{
   height: auto;
@@ -2208,7 +2222,7 @@ border-radius: 5px;
 }
 .skills{
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .nav-bar-2{
   display: block;
