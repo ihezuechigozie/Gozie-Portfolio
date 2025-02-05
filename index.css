@@ -1828,9 +1828,10 @@ height: 100vh;
   .about-span{
     display: block;
     width: auto;
-    margin: 0;
-    padding: 10px;
-
+    margin: 0 auto;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
   }
   .underline-1,
   .underline-2,
@@ -1846,8 +1847,17 @@ height: 100vh;
     justify-items: center;
     justify-self: center;
   }
+  .dropdown-content-1{
+    position: absolute;
+    margin: 0 auto;
+    left: 30px;
+    z-index: 20;
+  }
   .dropdown-content-2{
-    margin-left: 190px;
+    position: absolute;
+    margin: 0 auto;
+    left: 230px;
+    z-index: 20;
   }
   .search-area{
     margin-top: 20px;
@@ -1953,11 +1963,13 @@ border-radius: 5px;
 }
 
 #prev {
-  top: 650px;
+  position: absolute;
+  top: 900px;
   left: 40px;
 }
 #next {
-  top: 650px;
+  position: absolute;
+  top: 900px;
   right: 40px;
 }
 
@@ -2083,12 +2095,18 @@ border-radius: 5px;
 .contact-container {
   width: 100%;
   display: block;
-  margin: 0;
+  margin: 0 auto;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
 }
 .social-contact-div,
 .my-pic-container{
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
   margin-top: 20px;
 }
 .details{
@@ -2171,7 +2189,9 @@ border-radius: 5px;
  margin-top: 20px;
 }
 .work-sample-cont{
+  width: auto;
   display: block;
+  margin: 0 auto;
   justify-content: center;
   justify-items: center;
   justify-self: center;
